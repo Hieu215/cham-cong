@@ -27,7 +27,6 @@ const DefaultLayout: React.FC = () => {
     if(!userInfo) {
       navigate('/login')
     } 
-    console.log(userInfo);
   }, [userInfo]);
   return (
     <Layout>
