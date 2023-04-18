@@ -11,7 +11,7 @@ const initialState: ApplicationState = {
   loadding: false,
   showDetail: undefined,
   showSidebar: true,
-  user: {},
+  user: null,
 };
 
 const changeState = (state = initialState, { type, ...rest }: Record<string, any>) => {

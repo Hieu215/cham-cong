@@ -17,20 +17,18 @@ import { useDispatch } from 'react-redux';
 const { Header, Sider, Content } = Layout;
 const DefaultLayout: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const { user } = useSelector((state: ApplicationState) => state.user);
+  const userInfo  = useSelector((state: ApplicationState) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
     token: { colorBgContainer },
   } = theme.useToken();
   useEffect(() => {
-    if(user) {
+    if(!userInfo) {
       navigate('/login')
-    } else {
-      navigate('/')
-    }
-    console.log(user);
-  }, []);
+    } 
+    console.log(userInfo);
+  }, [userInfo]);
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
