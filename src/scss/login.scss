@@ -1,0 +1,25 @@
+.login-main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  background-image: linear-gradient(aquamarine, #9400D3);
+  .required-login {
+    color: red;
+  }
+  .show{
+    visibility: inherit;
+    padding-bottom: 20px;
+    padding-left: 16px;
+  }
+  .hidden{
+    visibility: hidden;
+    padding-bottom: 20px;
+    padding-left: 16px;
+  }
+}
